@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Professional Site</title>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body, html {
+        height: 100%;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        color: white;
+        overflow-x: hidden;
+    }
+    /* Background */
+    .background {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url('background.jpg') no-repeat center center/cover;
+        z-index: -2;
+        filter: brightness(0.6);
+        transition: all 0.5s ease;
+    }
+    /* Overlay for smooth effect */
+    .overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.4);
+        z-index: -1;
+    }
+    /* Main content */
+    .content {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        text-align: center;
+        padding: 20px;
+    }
+    h1 {
+        font-size: 60px;
+        margin-bottom: 20px;
+        text-shadow: 3px 3px 15px rgba(0,0,0,0.7);
+        animation: fadeIn 2s ease-in-out;
+    }
+    @keyframes fadeIn {
+        0% {opacity:0; transform: translateY(-30px);}
+        100% {opacity:1; transform: translateY(0);}
+    }
+    p {
+        font-size: 24px;
+        max-width: 800px;
+        margin-bottom: 40px;
+        line-height: 1.8;
+        text-shadow: 2px 2px 10px rgba(0,0,0,0.6);
+        animation: fadeIn 3s ease-in-out;
+    }
+    video {
+        width: 80%;
+        max-width: 700px;
+        border: 4px solid white;
+        border-radius: 20px;
+        box-shadow: 0 0 30px rgba(0,0,0,0.8);
+        animation: fadeIn 4s ease-in-out;
+    }
+    /* Responsive for mobile */
+    @media (max-width: 768px) {
+        h1 { font-size: 42px; }
+        p { font-size: 18px; }
+        video { width: 90%; }
+    }
+</style>
+</head>
+<body>
+    <div class="background"></div>
+    <div class="overlay"></div>
+    <div class="content">
+        <h1>Welcome!</h1>
+        <p>Explore my content and enjoy the experience. This is a professional-looking landing page with video and background.</p>
+        <video controls>
+            <source src="video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+</body>
+</html>
